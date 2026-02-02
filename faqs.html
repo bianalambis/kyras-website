@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Frequently asked questions about K'YRAS Underground Club. Entry, dress code, location, and more.">
+  <meta name="description"
+    content="Frequently asked questions about K'YRAS Underground Club. Entry, dress code, location, and more.">
   <title>FAQs | K'YRAS Underground Club</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- Scanline overlay -->
   <div class="scanline"></div>
@@ -88,10 +91,8 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Hours vary by event. Typical Saturday events run from 23:00 to 08:00.
-              Special extended events can run until 10:00 or later. Our Friday residency
-              opens at 23:00 and runs until 05:00. Sunday sessions operate from 14:00 to
-              22:00. Specific times are always listed on individual event pages.
+              Hours may vary by event. Our typical operating hours are from 8:00pm to 3:00am Wednesday through Sunday.
+              We are closed Mondays and Tuesdays.
             </div>
           </div>
         </div>
@@ -410,8 +411,8 @@
         <div>
           <p class="footer-heading">Location</p>
           <ul class="footer-links">
-            <li><span class="footer-link">Sector 7, Unit 42</span></li>
-            <li><span class="footer-link">Industrial District</span></li>
+            <li><span class="footer-link">110 S Orange Ave</span></li>
+            <li><span class="footer-link">Orlando, Fl</span></li>
             <li><span class="footer-link">Coordinates on RSVP</span></li>
           </ul>
         </div>
@@ -431,18 +432,18 @@
   </footer>
 
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
       document.querySelector('.nav-links').classList.toggle('active');
     });
 
     // FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach(function(question) {
-      question.addEventListener('click', function() {
+    document.querySelectorAll('.faq-question').forEach(function (question) {
+      question.addEventListener('click', function () {
         var item = this.parentElement;
         var wasActive = item.classList.contains('active');
 
         // Close all items
-        document.querySelectorAll('.faq-item').forEach(function(faq) {
+        document.querySelectorAll('.faq-item').forEach(function (faq) {
           faq.classList.remove('active');
         });
 
@@ -454,4 +455,5 @@
     });
   </script>
 </body>
+
 </html>
