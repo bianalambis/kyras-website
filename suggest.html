@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Suggest a song for K'YRAS Underground Club. Tell us what you want to hear on the dancefloor.">
+  <title>Suggest a Song | K'YRAS Underground Club</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Scanline overlay -->
+  <div class="scanline"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">K'YRAS</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li><a href="suggest.html" class="nav-link active">Suggest</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="section py-xxl" style="padding-top: 150px;">
+    <div class="container">
+      <span class="badge badge-cyan mb-md">COMMUNITY</span>
+      <h1 class="text-5xl text-display tracking-wide glow-lime mb-md">Suggest a Song</h1>
+      <p class="text-xl text-secondary" style="max-width: 600px;">
+        Tell us what you want to hear on the dancefloor.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section">
+      <div class="container container-narrow">
+        <form id="suggest-form" novalidate>
+          <div class="form-group">
+            <label for="song-title">Song Title <span class="required">*</span></label>
+            <input type="text" id="song-title" name="song-title" placeholder="Enter song title">
+          </div>
+
+          <div class="form-group">
+            <label for="artist">Artist <span class="required">*</span></label>
+            <input type="text" id="artist" name="artist" placeholder="Enter artist name">
+          </div>
+
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <select id="genre" name="genre">
+              <option value="" disabled selected>Select a genre</option>
+              <option value="techno">Techno</option>
+              <option value="house">House</option>
+              <option value="drum-and-bass">Drum & Bass</option>
+              <option value="trance">Trance</option>
+              <option value="ambient">Ambient</option>
+              <option value="experimental">Experimental</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Optional">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Why this track?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us why you want to hear this on the dancefloor"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-cyan">Submit Suggestion</button>
+        </form>
+
+        <div id="suggest-confirmation" class="suggest-confirmation" hidden>
+          <p class="suggest-confirmation-icon">&#10003;</p>
+          <h2 class="suggest-confirmation-title glow-cyan">Thanks for your suggestion!</h2>
+          <p class="suggest-confirmation-message">We'll keep it in mind for the next set.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo">K'YRAS</p>
+          <p class="footer-tagline">
+            An underground collective dedicated to pushing the boundaries of
+            electronic music and club culture. We exist in the spaces between.
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="events.html" class="footer-link">Events</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="faqs.html" class="footer-link">FAQs</a></li>
+            <li><a href="suggest.html" class="footer-link">Suggest a Song</a></li>
+            <li><a href="#" class="footer-link">Contact</a></li>
+            <li><a href="#" class="footer-link">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Location</p>
+          <ul class="footer-links">
+            <li><span class="footer-link">110 S Orange Ave</span></li>
+            <li><span class="footer-link">Orlando, Fl</span></li>
+            <li><span class="footer-link">Coordinates on RSVP</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 K'YRAS COLLECTIVE // ALL RIGHTS RESERVED // v2.0.26
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Instagram">IG</a>
+          <a href="#" class="footer-social" aria-label="SoundCloud">SC</a>
+          <a href="#" class="footer-social" aria-label="Resident Advisor">RA</a>
+          <a href="#" class="footer-social" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    (function () {
+      const form = document.getElementById('suggest-form');
+      const requiredFields = [
+        { id: 'song-title', message: 'Song title is required' },
+        { id: 'artist',     message: 'Artist is required' },
+      ];
+
+      function showError(field, message) {
+        const group = field.closest('.form-group');
+        group.classList.add('has-error');
+        let err = group.querySelector('.form-error');
+        if (!err) {
+          err = document.createElement('span');
+          err.className = 'form-error';
+          field.insertAdjacentElement('afterend', err);
+        }
+        err.textContent = message;
+      }
+
+      function clearError(field) {
+        const group = field.closest('.form-group');
+        group.classList.remove('has-error');
+        const err = group.querySelector('.form-error');
+        if (err) err.remove();
+      }
+
+      requiredFields.forEach(function ({ id }) {
+        document.getElementById(id).addEventListener('input', function () {
+          if (this.value.trim()) clearError(this);
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        requiredFields.forEach(function ({ id, message }) {
+          const field = document.getElementById(id);
+          if (!field.value.trim()) {
+            showError(field, message);
+            valid = false;
+          } else {
+            clearError(field);
+          }
+        });
+
+        if (valid) {
+          form.hidden = true;
+          document.getElementById('suggest-confirmation').hidden = false;
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
